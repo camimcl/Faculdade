@@ -1,43 +1,48 @@
 
-package questao_2;
-
-import java.util.Scanner;
-
-public class Descontos{
-    double FGTS,INSS,Sindicato,IR,descontos_total,salarioB,salarioL,valor,horas;
-    Scanner h = new Scanner(System.in);
-    Scanner v = new Scanner(System.in);
-    Scanner leave = new Scanner(System.in);
-
-    public double calculo(){
-     salarioB=(valor*horas);
-     INSS=(salarioB*10/100);
-     FGTS=(salarioB*11/100); 
-     Sindicato=(salarioB*3/100);
-     
-     if (salarioB<=900){
-        IR=(salarioB*0);
-        descontos_total=(INSS+IR);
-        salarioL=(salarioB-descontos_total);
-     }   
+package posto;
+import javax.swing.JOptionPane;
+public class Descontos {
+    double gaso, alco,litro,valor,desconto;
     
-     else if (salarioB>900 && salarioB<=1500){
-        IR=(salarioB*5/100);    
-        descontos_total=(INSS+IR);
-        salarioL=(salarioB-descontos_total);
-     }
-     
-     else if (salarioB>1500 && salarioB<=2500){
-        IR=(salarioB*10/100); 
-        descontos_total=(INSS+IR);
-        salarioL=(salarioB-descontos_total);
-     }
-     
-     else if (salarioB>2500){
-        IR=(salarioB*20/100);
-        descontos_total=(INSS+IR);
-        salarioL=(salarioB-descontos_total);       
-     }
-  return salarioB;   
-}   
+   public double gasolina (){ //4% && 6%
+  
+   
+   litro=Double.parseDouble(JOptionPane.showInputDialog("Quantos litros deseja colocar?"));    
+    if (litro<=20) {
+    gaso= 5.5;
+    valor = (litro*gaso);
+    desconto=(valor*0.04);
+    valor-=desconto;
+    
+    }
+    else if (litro>20){
+    gaso= 5.5;
+    valor = (litro*gaso);
+    desconto=(litro*gaso*0.06);
+    valor-=desconto;
+    }
+    
+   JOptionPane.showMessageDialog(null,"Valor a ser pago: R$"+valor);
+   return valor;
+   }
+   
+   public double alcool (){ //3% && 5% 
+       litro=Double.parseDouble(JOptionPane.showInputDialog("Quantos litros deseja colocar?"));    
+    if (litro<=20) {
+    alco= 3.0;
+    valor = (litro*alco);
+    desconto=(valor*0.03);
+    valor-=desconto;
+    
+    }
+    else if (litro>20){
+    alco= 3.0;
+    valor = (litro*alco);
+    desconto=(litro*alco*0.05);
+    valor-=desconto;
+    }   
+       
+   JOptionPane.showMessageDialog(null,"Valor a ser pago: R$"+valor);
+   return alco;
+   } 
 }
