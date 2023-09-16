@@ -1,4 +1,7 @@
+/*1 - Faça um programa em java que receba o valor dos
+catetos a e b de um triângulo, calcule e mostre o valor da hipotenusa. 
 
+*/
 package exercicio_1;
 
 import java.util.Scanner;
