@@ -1,7 +1,4 @@
-/*2- Crie uma classe para representar uma conta-corrente, com métodos para depositar uma 
-quantia, sacar uma quantia e obter o saldo. Para cada saque será debitada também uma
-taxa de operação equivalente à 0,5% do valor sacado. 
-*/
+
 
 package exercicio_2;
 import java.util.Scanner;
