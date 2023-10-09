@@ -1,0 +1,27 @@
+#table{
+    border: 1px solid black;
+    width: 40%;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+   
+}
+td,tr{
+    border: 1px, solid rgb(199, 30, 123);
+    border-style: solid;
+    background-color: rgb(64, 209, 107);
+    border-collapse: collapse;
+    font-size: 20px;
+    
+    
+}
+body{
+    color: blue;
+}
+tr{
+    text-align: center;
+}
