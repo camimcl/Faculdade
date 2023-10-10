@@ -8,20 +8,28 @@ public class Menu {
     double p3=4;
    
     public double media_a(){
-       
+       try{
        nota1 =Double.parseDouble(JOptionPane.showInputDialog("Digite a Primeira nota")); 
        nota2=Double.parseDouble(JOptionPane.showInputDialog("Digite a segunda nota"));
        media_a= (nota1+nota2)/2;
        JOptionPane.showMessageDialog(null, "A média aritmética das notas é :"+media_a);
-     
+       }
+        catch (NumberFormatException e) {
+           JOptionPane.showMessageDialog(null, "Opção inválida, tente novamente.");  
+        }
         return media_a;
     }
     public double media_p(){
+        try{
         nota1 =Double.parseDouble(JOptionPane.showInputDialog("Digite a Primeira nota")); 
        nota2=Double.parseDouble(JOptionPane.showInputDialog("Digite a segunda nota"));
        nota3=Double.parseDouble(JOptionPane.showInputDialog("Digite a terceira nota"));
        media_p=((nota1*p1)+(nota2*p2)+(nota3*p3))/(p1+p2+p3);
        JOptionPane.showMessageDialog(null, "A média ponderada das notas é :"+media_p);
+        }
+        catch (NumberFormatException e) {
+           JOptionPane.showMessageDialog(null, "Opção inválida, tente novamente.");  
+        }
     return media_p;
     }
 }
