@@ -1,0 +1,61 @@
+.red{
+    color: red;
+}
+.yellow{
+    color: yellow;
+}
+.green{
+    color: green;
+}
+.black{
+    color: black;
+}
+.purple{
+    color: purple;
+}
+.blue{
+    color: blue;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+table{
+    background-color: grey;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+}
+td{
+    padding: 10px;
+    border: solid black 1px;
+    height: 50px;
+    width: 15px;
+}
+.cor_1{
+    background-color:purple ;
+}
+.cor_2{
+    background-color: pink;
+}
+.cor_3{
+    background-color:blue ;
+}
+.cor_4{
+    background-color:red ;
+}
+.cor_5{
+    background-color:yellow ;
+}
+.cor_6{
+    background-color:rgb(255, 35, 200) ;
+}
+.cor_7{
+    background-color:green ;
+}
+.cor_8{
+   background-color:orange ;
+}
+.cor_nulo{
+    background-color:black ;
+}
