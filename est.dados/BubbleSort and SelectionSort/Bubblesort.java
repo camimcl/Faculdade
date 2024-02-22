@@ -1,6 +1,7 @@
 import com.sun.source.tree.Tree;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Bubblesort { //quer saber qual o maior, dai jogap pra direita (compara um numero com um numero repetidamente)
     public void bubbleSort(int [] vet){
@@ -56,4 +57,7 @@ public class Bubblesort { //quer saber qual o maior, dai jogap pra direita (comp
         }
         return Potencia(base,exp-1)*base;
     }
+
+
+
 }
