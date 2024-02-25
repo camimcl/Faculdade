@@ -16,10 +16,13 @@ public class App extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Teste pro trabalho");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("layout.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene tela = new Scene(root);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/TelaDeCadastro.fxml"));
+        Parent root = fxmlLoader.load();//scene eh o painel, n a janela
+        Scene tela = new Scene(root); //scene depende de uma tela real, que eh o fxmlloader
 
+        // Stage st = new Stage();// stage eh a janela, eh onde joga o painel
+        // st.setTitle("Segunda tela");
+        // st.setScene(tela);
         primaryStage.setTitle("Trabalho");
         primaryStage.setScene(tela);
         primaryStage.show();
