@@ -8,7 +8,11 @@ update,delete,insert and select(CRUD), and with interfaces.
 ===========Sketch===========
 *menu page with the operations needed (INSERT, DELETE, SELECT, UPDATE)
 *1 page intended fore each operation.
-*Client class for 
+*1 class intended for client information
+
 *MVC architecture
+-model class will contain the algorithm for each operation of the referent page.(business rule)
+-view class will be the view pages that capture the information from the user.
+-controller class will process the information received by the view class.
 
-
+=============================
