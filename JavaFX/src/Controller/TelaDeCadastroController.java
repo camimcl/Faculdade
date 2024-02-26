@@ -2,18 +2,26 @@ package Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import com.db4o.Db4o;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import Clientpackage.Client;
 
-
-public class TelaDeCadastroController {
+public class TelaDeCadastroController implements Initializable {
+    
+    @FXML
+    private ChoiceBox<String> choiceBox;
+    private String[]Gender ={"FEMININO","MASCULINO","OUTRO"};
     @FXML
     private DatePicker dateOfBirthContainer;
 
@@ -32,10 +40,13 @@ public class TelaDeCadastroController {
     @FXML
     private Button registerButton;
   
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        choiceBox.getItems().addAll(Gender);
+    }
     @FXML
     Client client= new Client();
     ObjectContainer db;
-
     @SuppressWarnings("deprecation")
     public void fazerCadastro(ActionEvent event) {
         db = Db4o.openFile("database.dbo");
@@ -56,5 +67,6 @@ public class TelaDeCadastroController {
             System.out.println(client.getName());
             System.out.println(client.getEmail());
         }
-    
-    }}
+        
+    }
+}

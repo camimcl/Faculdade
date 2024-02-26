@@ -18,7 +18,5 @@ public class App extends Application{
         primaryStage.setTitle("Register");
         primaryStage.setScene(tela);
         primaryStage.show();
-
-
     }
 }

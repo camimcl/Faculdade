@@ -3,7 +3,7 @@ public class Client {
     private String name;
     private String email;
     private String password;
-    private Gender gender;
+    private String gender;
     private int dateOfBirth;
 
     public String getName() {
@@ -30,16 +30,18 @@ public class Client {
         this.password = password;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
+   
 
     public int getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public void setDateOfBirth(int dateOfBirth) {
