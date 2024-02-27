@@ -10,13 +10,11 @@ public class App extends Application{
         launch(args);
     }
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/TelaDeCadastro.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene tela = new Scene(root);
-
-        primaryStage.setTitle("Register");
-        primaryStage.setScene(tela);
-        primaryStage.show();
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("view/TelaDeCadastro.fxml"));
+        Scene scene = new Scene(root);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
     }
 }
